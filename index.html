@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Color!</title>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#000000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="apple-touch-icon" href="/icons/apple-icon-180.png">
+    <link rel="manifest" crossorigin="use-credentials" href="/manifest.json">
+
+    <base href="/"> 
+    <script src="/script.js"></script>
+</head>
+
+
+<body style="background-color: #000000">
+    <span>
+        <div style="background-color: #ff0000cc;width: fit-content;padding:1rem">
+            <b> Red </b><br>
+            <input type="number" value="0" id="redInput" size="2" oninput="redInput()">
+            <input type="range" min="0" max="255" value="0" id="redSlider" oninput="redSlider()">
+        </div><br>
+
+        <div style="background-color: #00ff00cc;width: fit-content; padding:1rem">
+            <b> Green </b><br>
+            <input type="number" value="0" id="greenInput" class="green" oninput="greenInput()">
+            <input type="range" min="0" max="255" value="0" id="greenSlider" class="green" oninput="greenSlider()">
+        </div><br>
+
+        <div style="background-color: #0080ffcc;width: fit-content; padding:1rem">
+            <b> Blue </b><br>
+            <input type="number" value="0" id="blueInput" class="blue" oninput="blueInput()">
+            <input type="range" min="0" max="255" value="0" id="blueSlider" class="blue" oninput="blueSlider()">
+        </div>
+        <br>
+        <button type="button" id="randomize" onclick="randomize()">Randomize!</button>
+    </span>
+</body>
+
+</html>
