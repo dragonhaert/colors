@@ -17,3 +17,16 @@ self.addEventListener('fetch', event => {
 
     event.respondWith(fetch(event.request));
 });
+
+var GHPATH = '/colors';
+ 
+var APP_PREFIX = 'colors_';
+ 
+var VERSION = 'version_00';
+ 
+var URLS = [    
+  `${GHPATH}/`,
+  `${GHPATH}/index.html`,
+  `${GHPATH}/manifest,json`,
+  `${GHPATH}/script.js`
+]
