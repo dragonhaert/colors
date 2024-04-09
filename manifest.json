@@ -1,8 +1,8 @@
 {
-    "id": "/index.html",
+    "id": "/colors/index.html",
     "name": "RGB",
     "short_name": "RGB",
-    "start_url": "/index.html",
+    "start_url": "/colors/index.html",
     "background_color": "#000000",
     "theme_color": "#FFFFFF",
     "display": "standalone",
