@@ -13,31 +13,32 @@
     <link rel="stylesheet" href="colors/css/styles.css">
     <link rel="apple-touch-icon" href="/colors/icons/apple-icon-180.png">
 
-    <script src="/colors/script.js"></script>
+    <script src="/colors/js/script.js"></script>
 </head>
 
 
 <body>
     <span>
         <div class="color" id="red">
-            <b> Red </b><br>
-            <input type="number" value="0" id="redInput" size="2" oninput="redInput()">
-            <input type="range" min="0" max="255" value="0" id="redSlider" oninput="redSlider()">
-        </div><br>
+            <b> Red </b>
+            <input type="number" value="0" id="redInput" size="2" oninput="triggerInput('red')">
+            <input type="range" min="0" max="255" value="0" id="redSlider" oninput="triggerSlider('red')">
+        </div>
 
         <div class="color" id="green">
-            <b> Green </b><br>
-            <input type="number" value="0" id="greenInput" class="green" oninput="greenInput()">
-            <input type="range" min="0" max="255" value="0" id="greenSlider" class="green" oninput="greenSlider()">
-        </div><br>
+            <b> Green </b>
+            <input type="number" value="0" id="greenInput" class="green" oninput="triggerInput('green')">
+            <input type="range" min="0" max="255" value="0" id="greenSlider" class="green" oninput="triggerSlider('green')">
+        </div>
 
         <div class="color" id="blue">
-            <b> Blue </b><br>
-            <input type="number" value="0" id="blueInput" class="blue" oninput="blueInput()">
-            <input type="range" min="0" max="255" value="0" id="blueSlider" class="blue" oninput="blueSlider()">
+            <b> Blue </b>
+            <input type="number" value="0" id="blueInput" class="blue" oninput="triggerInput('blue')">
+            <input type="range" min="0" max="255" value="0" id="blueSlider" class="blue" oninput="triggerSlider('blue')">
         </div>
-        <br>
-        <button type="button" id="randomize" onclick="randomize()">Randomize!</button>
+        <div>
+            <button type="button" id="randomize" onclick="randomize()">Randomize!</button>
+        </div>
     </span>
 </body>
 

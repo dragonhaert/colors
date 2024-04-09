@@ -1,9 +1,11 @@
-let redValue = 0;
-let greenValue = 0;
-let blueValue = 0;
+colorValues = {
+    redValue: 0,
+    greenValue: 0,
+    blueValue: 0
+}
 
 function rgb() {
-    return "rgb(" + redValue + "," + greenValue + "," + blueValue + ")";
+    return "rgb(" + colorValues.redValue + "," + colorValues.greenValue + "," + colorValues.blueValue + ")";
 }
 
 function updateBackground() {
@@ -11,63 +13,30 @@ function updateBackground() {
 }
 
 function updateInputs() {
-    document.getElementsByClassName('red').value = redValue;
-    document.getElementsByClassName('green').value = greenValue;
-    document.getElementsByClassName('blue').value = blueValue;
+    document.getElementsByClassName('red').value = colorValues.redValue;
+    document.getElementsByClassName('green').value = colorValues.greenValue;
+    document.getElementsByClassName('blue').value = colorValues.blueValue;
 }
 
-function redInput() {
-    if (document.getElementById('redInput').value > 255) document.getElementById('redInput').value = 255;
-    else if (document.getElementById('redInput').value < 0) document.getElementById('redInput').value = 0;
-    redValue = document.getElementById('redInput').value;
-    document.getElementById('redSlider').value = redValue;
+function triggerInput(color) {
+    if (document.getElementById(`${color}Input`).value > 255) document.getElementById(`${color}Input`).value = 255;
+    else if (document.getElementById(`${color}Input`).value < 0) document.getElementById(`${color}Input`).value = 0;
+    colorValues[color] = document.getElementById(`${color}Input`).value;
+    document.getElementById(`${color}Slider`).value = colorValues[color];
     updateBackground();
 }
 
-function redSlider() {
-    redValue = document.getElementById('redSlider').value;
-    document.getElementById('redInput').value = redValue
-    updateBackground();
-}
-
-
-function greenInput() {
-    if (document.getElementById('greenInput').value > 255) document.getElementById('greenInput').value = 255;
-    else if (document.getElementById('greenInput').value < 0) document.getElementById('greenInput').value = 0;
-    greenValue = document.getElementById('greenInput').value;
-    document.getElementById('greenSlider').value = greenValue;
-    updateBackground();
-}
-
-function greenSlider() {
-    greenValue = document.getElementById('greenSlider').value;
-    document.getElementById('greenInput').value = greenValue;
-    updateBackground();
-}
-function blueInput() {
-    if (document.getElementById('blueInput').value > 255) document.getElementById('blueInput').value = 255;
-    else if (document.getElementById('blueInput').value < 0) document.getElementById('blueInput').value = 0;
-    blueValue = document.getElementById('blueInput').value;
-    document.getElementById('blueSlider').value = blueValue;
-    updateBackground();
-}
-
-function blueSlider() {
-    blueValue = document.getElementById('blueSlider').value;
-    document.getElementById('blueInput').value = blueValue;
+function triggerSlider(color) {
+    colorValues[color] = document.getElementById(`${color}Slider`).value;
+    document.getElementById(`${color}Input`).value = colorValues[color]
     updateBackground();
 }
 
 function randomize() {
-    redValue = Math.round(Math.random() * 255 + 1);
-    document.getElementById('redInput').value = redValue;
-    document.getElementById('redSlider').value = redValue;
-    greenValue = Math.round(Math.random() * 255 + 1);
-    document.getElementById('greenInput').value = greenValue;
-    document.getElementById('greenSlider').value = greenValue;
-    blueValue = Math.round(Math.random() * 255 + 1);
-    document.getElementById('blueInput').value = blueValue;
-    document.getElementById('blueSlider').value = blueValue;
+    colorValues.redValue = Math.round(Math.random() * 255 + 1);
+    colorValues.greenValue = Math.round(Math.random() * 255 + 1);
+    colorValues.blueValue = Math.round(Math.random() * 255 + 1);
+    updateInputs();
     updateBackground();
 }
 
