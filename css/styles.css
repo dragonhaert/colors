@@ -1,0 +1,24 @@
+body {
+    background-color: #000000;
+}
+
+.color {
+    width: fit-content;
+    padding:1rem
+}
+
+#red {
+    background-color: #ff0000cc;
+}
+
+#green {
+    background-color: #00ff00cc;
+}
+
+#blue {
+    background-color: #0080ffcc;
+}
+
+b {
+    display: block;
+}

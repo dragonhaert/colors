@@ -72,14 +72,8 @@ function randomize() {
 }
 
 window.addEventListener('load', () => {
-    const base = document.querySelector('base');
-    let baseUrl = base && base.href || '';
-    if (!baseUrl.endsWith('/')) {
-        baseUrl = `${baseUrl}/`;
-    }  
-  
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register(`${baseUrl}sw.js`)
+        navigator.serviceWorker.register('/colors/sw.js',{scope: '/colors/'})
             .then( registration => {
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
         })
