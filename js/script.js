@@ -13,9 +13,12 @@ function updateBackground() {
 }
 
 function updateInputs() {
-    document.getElementsByClassName('red').value = colorValues.redValue;
-    document.getElementsByClassName('green').value = colorValues.greenValue;
-    document.getElementsByClassName('blue').value = colorValues.blueValue;
+    document.getElementById('redSlider').value = colorValues.redValue;
+    document.getElementById('redInput').value = colorValues.redValue;
+    document.getElementById('greenSlider').value = colorValues.greenValue;
+    document.getElementById('greenInput').value = colorValues.greenValue;
+    document.getElementById('blueSlider').value = colorValues.blueValue;
+    document.getElementById('blueInput').value = colorValues.blueValue;
 }
 
 function triggerInput(color) {
