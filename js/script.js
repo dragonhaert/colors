@@ -1,24 +1,20 @@
 colorValues = {
-    redValue: 0,
-    greenValue: 0,
-    blueValue: 0
-}
-
-function rgb() {
-    return "rgb(" + colorValues.redValue + "," + colorValues.greenValue + "," + colorValues.blueValue + ")";
+    red: 0,
+    green: 0,
+    blue: 0
 }
 
 function updateBackground() {
-    document.body.style.backgroundColor = rgb();
+    document.body.style.backgroundColor = "rgb(" + colorValues.red + "," + colorValues.green + "," + colorValues.blue + ")";
 }
 
 function updateInputs() {
-    document.getElementById('redSlider').value = colorValues.redValue;
-    document.getElementById('redInput').value = colorValues.redValue;
-    document.getElementById('greenSlider').value = colorValues.greenValue;
-    document.getElementById('greenInput').value = colorValues.greenValue;
-    document.getElementById('blueSlider').value = colorValues.blueValue;
-    document.getElementById('blueInput').value = colorValues.blueValue;
+    document.getElementById('redSlider').value = colorValues.red;
+    document.getElementById('redInput').value = colorValues.red;
+    document.getElementById('greenSlider').value = colorValues.green;
+    document.getElementById('greenInput').value = colorValues.green;
+    document.getElementById('blueSlider').value = colorValues.blue;
+    document.getElementById('blueInput').value = colorValues.blue;
 }
 
 function triggerInput(color) {
@@ -36,9 +32,9 @@ function triggerSlider(color) {
 }
 
 function randomize() {
-    colorValues.redValue = Math.round(Math.random() * 255 + 1);
-    colorValues.greenValue = Math.round(Math.random() * 255 + 1);
-    colorValues.blueValue = Math.round(Math.random() * 255 + 1);
+    colorValues.red = Math.round(Math.random() * 255 + 1);
+    colorValues.green = Math.round(Math.random() * 255 + 1);
+    colorValues.blue = Math.round(Math.random() * 255 + 1);
     updateInputs();
     updateBackground();
 }
